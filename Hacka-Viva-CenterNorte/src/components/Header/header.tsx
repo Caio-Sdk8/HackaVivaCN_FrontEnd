@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import VivaLogo from '../../assets/Fidelidade-Viva-Vermelho.png'
 import './header.css'
@@ -10,8 +9,7 @@ function Header(){
         console.log(currentLocation)
     }*/
     var inicio = <Link to="/" >Inicio</Link>;
-    var carteira = <Link to="/" >Carteira</Link>;
-    var agendamentos = <Link to="/Agendamentos" >Agendamentos</Link>;
+    var PartyCity = <Link to="/PartyCity" >PartyCity</Link>;
     var eventos = <Link to="/Eventos" >Eventos</Link>;
     var contato = <Link to="/Contato" >Contato</Link>;
 
@@ -30,8 +28,7 @@ function Header(){
             <img src= {VivaLogo} alt=""/>
             <nav>
                 {inicio}
-                {carteira}
-                {agendamentos}
+                {PartyCity}
                 {eventos}
                 {contato}
             </nav>

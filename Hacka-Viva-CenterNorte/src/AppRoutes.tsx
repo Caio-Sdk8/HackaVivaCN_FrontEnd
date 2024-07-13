@@ -2,7 +2,7 @@ import { Route, BrowserRouter, Routes } from "react-router-dom"; // Importe tamb
 import Contact from "./screens/Contact/contact";
 import Home from "./screens/Home/home";
 import Event from "./screens/Events/event";
-import Agenda from "./screens/Agenda/agenda";
+import Carteira from "./screens/Wallet/carteira";
 
 const AppRoutes = () => {
    return(
@@ -11,7 +11,7 @@ const AppRoutes = () => {
                <Route path="/" element={<Home/>}/>     
                <Route path="/Contato" element={<Contact />} />
                <Route path="/Eventos" element={<Event />} />
-               <Route path="/Agendamentos" element={<Agenda />} />
+               <Route path="/PartyCity" element={<Carteira />} />
            </Routes>
        </BrowserRouter>
    );

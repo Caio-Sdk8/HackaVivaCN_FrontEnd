@@ -3,7 +3,7 @@ import axios from "axios";
 import Header from '../../components/Header/header'
 import bgs from '../../assets/bgs.png'
 import './event.css'
-import { redirect } from "react-router-dom";
+import Footer from "../../components/Footer/footer";
 
 interface Credential{
     idCustomer: number,
@@ -24,7 +24,6 @@ export default function Event(){
             try {
                 const response = await axios.get<Credential[]>('https://6691987e26c2a69f6e903a2c.mockapi.io/CityCnAPI/EventCredencial');
                 setCredentials(response.data);
-                console.log(Credentials)
             } catch (err) {
                 setError('Erro ao carregar credenciais.');
             } finally {
@@ -96,6 +95,7 @@ export default function Event(){
                     }
                 </div>
             </section>
+            <Footer></Footer>
         </div>
     )
 }

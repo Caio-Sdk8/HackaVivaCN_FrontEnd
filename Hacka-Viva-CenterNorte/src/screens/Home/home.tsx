@@ -9,7 +9,9 @@ import Roupas  from '../../assets/pajamas_12692137.png';
 import Padaria from '../../assets/bakery-shop_4673943.png';
 import Geral from '../../assets/image_545236.png';
 import banner from '../../assets/mainimg.png';
-import bgs from '../../assets/bgs.png'
+import bgs from '../../assets/bgs.png';
+import Footer from "../../components/Footer/footer";
+import { redirect } from "react-router-dom";
 
 interface Customer {
     id: number;
@@ -112,7 +114,7 @@ export default function Home() {
                                     case "Esportes":
                                         return(
                                             (
-                                                <div className="CardLoja" key={store.id}>
+                                                <div className="CardLoja" key={store.id} >
                                                     <img src={Esporte} alt=""/>
                                                     <p>{store.name}</p>
                                                 </div>
@@ -182,6 +184,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            <Footer></Footer>
         </div>
     )
 }

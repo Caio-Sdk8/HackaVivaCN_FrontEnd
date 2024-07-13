@@ -2,7 +2,14 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import './home.css';
 import Header from '../../components/Header/header';
+import Esporte from '../../assets/sport_1198314.png';
+import Supermercado from '../../assets/shopping-cart_3306024.png';
+import Eletronico from '../../assets/multiscreen_4207283.png';
+import Roupas  from '../../assets/pajamas_12692137.png';
+import Padaria from '../../assets/bakery-shop_4673943.png';
+import Geral from '../../assets/image_545236.png';
 import banner from '../../assets/mainimg.png';
+import bgs from '../../assets/bgs.png'
 
 interface Customer {
     id: number;
@@ -55,6 +62,7 @@ export default function Home() {
             try {
                 const response = await axios.get<Customer>('https://hackathon.vivacn.roxcode.io/api/customers/details?id=1');
                 setCustomer(response.data);
+                localStorage.setItem('user-logado', response.data.id.toString())
             } catch (err) {
                 setError('Erro ao carregar os detalhes do cliente.');
             } finally {
@@ -96,18 +104,81 @@ export default function Home() {
                     <div>
                         <p>Olá, Bem vindo de volta ao clube de benefícios que te deixe sem ter norte ao sentir a experiência Viva Center Norte, uma cidade feita para você.</p>
                     </div>
-                    <div>
+                    <div className="Interesse">
                         <h2>Talvez possa se interessar:</h2>
-                        <ul>
-                            {storesRecomended.map(store => (
-                                <li key={store.id}>
-                                    <strong>{store.name}</strong> - {store.category}
-                                </li>
-                            ))}
-                        </ul>
+                        <div className="SectionCards">
+                            {storesRecomended.map(store =>{
+                                switch (store.category) {
+                                    case "Esportes":
+                                        return(
+                                            (
+                                                <div className="CardLoja" key={store.id}>
+                                                    <img src={Esporte} alt=""/>
+                                                    <p>{store.name}</p>
+                                                </div>
+                                            )
+                                        )
+                                        break;
+                                    case "Eletrônicos":
+                                        return(
+                                            (
+                                                <div className="CardLoja" key={store.id}>
+                                                    <img src={Eletronico} alt=""/>
+                                                    <p>{store.name}</p>
+                                                </div>
+                                            )
+                                        )
+                                        break;
+                                    case "Supermercado":
+                                        return(
+                                            (
+                                                <div className="CardLoja" key={store.id}>
+                                                    <img src={Supermercado} alt=""/>
+                                                    <p>{store.name}</p>
+                                                </div>
+                                            )
+                                        )
+                                        break;
+                                    case "Roupas":
+                                        return(
+                                            (
+                                                <div className="CardLoja" key={store.id}>
+                                                    <img src={Roupas} alt=""/>
+                                                    <p>{store.name}</p>
+                                                </div>
+                                            )
+                                        )
+                                        break;
+                                    case "Padaria":
+                                        return(
+                                            (
+                                                <div className="CardLoja" key={store.id}>
+                                                    <img src={Padaria} alt=""/>
+                                                    <p>{store.name}</p>
+                                                </div>
+                                            )
+                                        )
+                                        break;
+                                    default:
+                                        return(
+                                            (
+                                                <div key={store.id}>
+                                                    <img src={Geral} alt=""/>
+                                                    <p>{store.name}</p>
+                                                </div>
+                                            )
+                                        )
+                                        break;
+                                }
+                            })}
+                        </div>
                     </div>
-                    <div>
+                    <div className="Interesse">
                         <h2>Eventos para você!</h2>
+                        <div className="CardLoja">
+                            <img src={bgs} alt=""/>
+                            <p>BGS</p>
+                        </div>
                     </div>
                 </div>
             </section>

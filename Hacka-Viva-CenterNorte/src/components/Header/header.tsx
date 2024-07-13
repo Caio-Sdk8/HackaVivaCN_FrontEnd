@@ -11,8 +11,8 @@ function Header(){
     }*/
     var inicio = <Link to="/" >Inicio</Link>;
     var carteira = <Link to="/" >Carteira</Link>;
-    var agendamentos = <Link to="/" >Agendamentos</Link>;
-    var market_place = <Link to="/" >Market-Place</Link>;
+    var agendamentos = <Link to="/Agendamentos" >Agendamentos</Link>;
+    var eventos = <Link to="/Eventos" >Eventos</Link>;
     var contato = <Link to="/Contato" >Contato</Link>;
 
     /*switch (currentLocation) {
@@ -32,7 +32,7 @@ function Header(){
                 {inicio}
                 {carteira}
                 {agendamentos}
-                {market_place}
+                {eventos}
                 {contato}
             </nav>
         </div>

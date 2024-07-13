@@ -4,6 +4,7 @@ import Header from '../../components/Header/header'
 import coin from '../../assets/coin_6691450.png'
 import avatar from '../../assets/user_219976.png'
 import missao from '../../assets/mission_1628615.png'
+import missaoCon from '../../assets/mission_162861.png'
 import Footer from "../../components/Footer/footer";
 import axios from 'axios';
 
@@ -77,6 +78,12 @@ export default function Carteira(){
                     <section className='SecMiss'>
                         <h2>Missões</h2>
                         <div className='SectionCards'>
+                            <div className="CardMissao MissaoConcluida" >
+                                <img src={missaoCon} alt=""/>
+                                <p className='title'>Missão: Explorador Inicial</p>
+                                <p>Faça check-in em três lojas diferentes no shopping Center Norte.<br />
+                                Recompensa: 50 pontos + Medalha "Explorador Inicial"</p>
+                            </div>
                             <div className="CardMissao" >
                                 <img src={missao} alt=""/>
                                 <p className='title'>Missão: Fotos Divertidas</p>
@@ -85,21 +92,15 @@ export default function Carteira(){
                             </div>
                             <div className="CardMissao" >
                                 <img src={missao} alt=""/>
-                                <p className='title'>Missão: Evento Exclusivo</p>
-                                <p>Participe de um evento especial promovido pelo shopping (ex: lançamento de produto, workshop).<br />
-                                Recompensa: 120 pontos + Acesso VIP para o próximo evento</p>
-                            </div>
-                            <div className="CardMissao" >
-                                <img src={missao} alt=""/>
                                 <p className='title'>Missão: Compras Sustentáveis</p>
                                 <p>Compre um produto de uma loja participante da campanha de sustentabilidade do shopping. <br />
-                                Recompensa: 80 pontos + Badge "Comprador Sustentável"</p>
+                                Recompensa: 80 pontos + Medalha "Comprador Sustentável"</p>
                             </div>
                             <div className="CardMissao" >
                                 <img src={missao} alt=""/>
-                                <p className='title'>Missão: Explorador Inicial</p>
-                                <p>Faça check-in em três lojas diferentes no shopping center.<br />
-                                Recompensa: 50 pontos + Badge "Explorador Inicial"</p>
+                                <p className='title'>Missão: Evento Exclusivo</p>
+                                <p>Participe de um evento especial promovido pelo shopping (ex: lançamento de produto, workshop).<br />
+                                Recompensa: 200 pontos + Acesso VIP para o próximo evento</p>
                             </div>
                         </div>
                     </section>

@@ -25,7 +25,7 @@ section{
     height: 40vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     border: 2px solid;
     border-radius: 10px;
     padding: 0px 20px;
@@ -41,7 +41,7 @@ section{
 }
 
 .CardPointsLvl img{
-    height: 87%;
+    height: 80%;
     width: auto;
 }
 
@@ -83,7 +83,7 @@ p {
     font-size: 26px;
 }
 .SecInfos img{
-    height: 95%;
+    height: 90%;
     width: auto;
     margin-right: 40px;
 }
@@ -104,6 +104,8 @@ p {
 }
 
 .CardMissao{
+    background-color: #f4f1f1;
+    color: #9E9F9F;
     width: 240px;
     display: flex;
     flex-direction: column;
@@ -114,6 +116,10 @@ p {
     border-width: 2px;
     border-radius: 20px;
     padding: 0px 1%;
+}
+
+.MissaoConcluida{
+    background-color: white;
 }
 
 .CardMissao img{
